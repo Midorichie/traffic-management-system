@@ -1,0 +1,30 @@
+[project]
+name = "traffic-management-system"
+description = "IoT-based Intelligent Traffic Management System on Stacks Blockchain"
+authors = []
+telemetry = false
+requirements = []
+
+[contracts.traffic-signals]
+path = "contracts/traffic-signals.clar"
+clarity_version = 2
+epoch = 2.1
+
+[contracts.traffic-data]
+path = "contracts/traffic-data.clar"
+clarity_version = 2
+epoch = 2.1
+
+[contracts.signal-optimizer]
+path = "contracts/signal-optimizer.clar"
+clarity_version = 2
+epoch = 2.1
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = true
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
